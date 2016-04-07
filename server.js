@@ -12,12 +12,15 @@ function compile(str, path) {
 }
 
 app.set("views", __dirname + "/server/views");
+
 app.set("view engine", "jade");
 
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+
 app.use(bodyParser.json());
+
 app.use(stylus.middleware({
     src: __dirname + "/public",
     compile: compile
@@ -29,17 +32,9 @@ mongoose.connect("mongodb://localhost/sfnodeclub");
 var db = mongoose.connection;
 
 db.on("error", console.error.bind(console, "A connection error has occurred..."));
+
 db.once('open', function cb() {
     console.log("SFNodeClub connection is open now");
-});
-
-var meetupSchema = mongoose.Schema({
-    name: String
-});
-var Meetup = mongoose.model("Name", meetupSchema);
-var dbMeetup;
-Meetup.findOne().exec(function (err, meetupDoc) {
-    dbMeetup = meetupDoc.name;
 });
 
 require('./server/config/routes')(app);
