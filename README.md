@@ -14,6 +14,10 @@ jade v1.11.0
 
 stylus v0.54.2
 
+```
+    npm install express stylus body-parser mongoose jade
+```
+
 # Basic Setup
 Clone the repo or download the Zip file.
 
@@ -30,7 +34,7 @@ Open your preferred browser (Chrome or Firefox), and type "http://localhost:8090
 ![Alt text](/Extras/Screenshots/start-node-server-2.png?raw=true "Start node server")
 
 
-# Mongo DB Setup
+# Mongo DB Setup (running at the default port: 27017)
 Create a new DB called "sfnodeclub"
 ![Alt text](/Extras/Screenshots/mongo-db-name.png?raw=true "Mongo DB name")
 
