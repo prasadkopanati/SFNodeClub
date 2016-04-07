@@ -1,0 +1,6 @@
+div.panel.panel-primary
+    div.panel-heading Explore Today's Events
+    div.panel-body 
+        .row(ng-repeat="ncEvent in ncEvents | filter:{todaysEvent:true}")
+            .col-sm-12 {{ncEvent.name}}
+                

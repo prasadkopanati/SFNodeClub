@@ -1,0 +1,16 @@
+div.lp-bkimg
+    .container
+        .jumbotron
+            h1 SFNode Club
+            h2 Welcome to the SFNode Club of the Bay Area. 
+            p Find local Node.js events in the SF Bay Area, meet fellow developers, socialize, enjoy free food and simply have fun.
+            p.btn-p 
+                a(class="btn btn-primary btn-lg" href="#divEvents") Learn More
+
+div#divEvents.event-dets
+    .container
+        .row
+            .col-sm-6
+                div(ng-include="'/partials/todays-events'")
+            .col-sm-6
+                div(ng-include="'/partials/upcoming-events'")

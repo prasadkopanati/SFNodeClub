@@ -1,0 +1,21 @@
+extends ../includes/layout
+
+block main-content
+    .navbar.navbar-inverse.navbar-fixed-top
+        .container
+            .navbar-header
+                a.navbar-brand(href="/") SFNode Club
+                    p Node.js Meetups in SF Bay Area
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li 
+                        a(href="/") Home
+                    li
+                        a(href="/about") About
+    
+    section.content
+        div(ng-view)
+            
+            
+    footer.container
+        p &copy; 2016 SFNode Club.

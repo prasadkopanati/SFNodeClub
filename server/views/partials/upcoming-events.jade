@@ -1,0 +1,6 @@
+div.panel.panel-primary
+    div.panel-heading Discover Upcoming Events
+    div.panel-body 
+        .row(ng-repeat="ncEvent in ncEvents | filter:{todaysEvent:false}")
+            .col-sm-3 {{ncEvent.eventDate | date:'MMM dd, yyyy'}}
+            .col-sm-9 {{ncEvent.name}}
